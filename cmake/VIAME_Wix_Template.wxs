@@ -16,7 +16,7 @@
 
         <Media Id="1" Cabinet="media1.cab" EmbedCab="yes"/>
         <Media Id="2" Cabinet="media2.cab" EmbedCab="no"/>
-        <!--Media Id="3" Cabinet="media3.cab" EmbedCab="no"/-->
+        <Media Id="3" Cabinet="media3.cab" EmbedCab="no"/>
 
         <MajorUpgrade
             Schedule="afterInstallInitialize"
