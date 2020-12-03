@@ -91,6 +91,7 @@ if( CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS )
 endif()
 
 install( DIRECTORY ${VIAME_INSTALL_DIR}/ DESTINATION . )
+install( DIRECTORY DESTINATION "data")
 
 if( WIN32 )
   install( FILES ${VIAME_CMAKE_DIR}/setup_viame.bat.install
@@ -126,6 +127,8 @@ if(WIN32)
   endif()
   set(CPACK_WIX_UPGRADE_GUID "91A46E15-EE49-4411-9836-583499D9C12D")
   set(CPACK_WIX_COMPONENT_INSTALL ON)
+  set(CPACK_WIX_TEMPLATE "${VIAME_CMAKE_DIR}/VIAME_Wix_Template.wxs")
+  set(CPACK_WIX_PATCH_FILE "${VIAME_CMAKE_DIR}/VIAME_Wix_Patch.xml")
   get_cmake_property(CPACK_COMPONENTS_ALL COMPONENTS)
   list(REMOVE_ITEM CPACK_COMPONENTS_ALL "System" "Unspecified" "runtime")
 endif()

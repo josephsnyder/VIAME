@@ -1,0 +1,14 @@
+<CPackWiXPatch>
+  <CPackWiXFragment Id="CM_DP_data">
+      <Component Id="CM_CP_VIAME.data.slmodels" Guid="*">
+          <File Id="CM_CP_VIAME.data.slmodels.zip" Source="D:/Work/NOAA/VIAME/VIAME-Sea-Lion-Models-v1.2.zip" KeyPath="yes" DiskId="2"/>
+      </Component>
+  </CPackWiXFragment>
+  <CPackWiXFragment Id="#PRODUCTFEATURE">
+      <Feature Id="CM_C_VIAME_DATA" Title="VIAME Data">
+        <Feature Id="CM_C_VIAME_DATA_SL" Title="VIAME Sea Lion Models">
+          <ComponentRef Id="CM_CP_VIAME.data.slmodels"/>
+        </Feature>
+      </Feature>
+  </CPackWiXFragment>
+</CPackWiXPatch>
